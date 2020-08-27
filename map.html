@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+      #map {
+        height: 400px;  
+        width: 100%;  
+       }
+    </style>
+  </head>
+  <body>
+
+    <div id="map"></div>
+    <script>
+
+function initMap() {
+
+  var india = {lat: 30.3752, lng: 76.7821};
+  var france = {lat: 48.8566, lng: 2.3522};
+ 
+  var map = new google.maps.Map(document.getElementById('map'), {zoom: 2, center: india});
+  
+  var marker = new google.maps.Marker({position: india, map: map});
+    var marker = new google.maps.Marker({position: france, map: map});
+}
+    </script>
+    
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8saq3FTV5O8Sl1jtBe7p-x8Rn2UM_rfY&callback=initMap">
+    </script>
+  </body>
+</html>
